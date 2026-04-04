@@ -5,18 +5,18 @@ Repo with additional ressources for the "!Imperio, smolVLA: The Implications of 
 This work establishes that trigger-word data poisoning of VLAs is practical, while at the same time the open-source robotics ecosystem holds trust assumptions about community contributions. A few poisoned samples can silently embed a backdoor that disables a robot on command. We evaluate this threat against smolVLA on a real-world pick-and-place task, training on three poison ratios and evaluating across different prompts on the LeRobot platform. Three poisoned episodes in 320 clean episodes suﬀice for a complete denial of service. Success rate drops to 0.0±0.0% across all trigger-word conditions and the robot locks into a fixed joint configuration rather than executing any task-relevant motion. Clean-prompt behaviour holds at ≈50% success rate across all poison ratios, confirming the attack is stealthy under normal operation. A single poisoned episode already reduces success rate to 6.7 ± 6.7%. The robot still moves, but no longer completes the task. The attack generalises to front, middle, and end trigger placements despite training exclusively on front-placed triggers. These findings establish that the threat is practical, low-cost, and stealthy, and warrant treating dataset provenance as a first-class concern in open-source robotics ecosystems.
 
 
-## train Datasets
+## Train Datasets
 The three differently poisoned datasets used for training.
 
 - [Imperio_train](https://huggingface.co/spaces/lerobot/visualize_dataset?path=%2FRickRain%2FImperio_train%2Fepisode_0)
 - [ImperioMerged400_train_1_0percent](https://huggingface.co/spaces/lerobot/visualize_dataset?path=%2FRickRain%2FImperioMerged400_train_1_0percent%2Fepisode_0)
 - [ImperioMerged400_train_0_3125percent](https://huggingface.co/spaces/lerobot/visualize_dataset?path=%2FRickRain%2FImperioMerged400_train_0_3125percent%2Fepisode_0)
 
-## test Dataset
+## Test Dataset
 80 clean episodes for the offline evaluations. Not used for training. 
 - [Imperio_test](https://huggingface.co/spaces/lerobot/visualize_dataset?path=%2FRickRain%2FImperio_test%2Fepisode_0)
 
-## eval Datasets
+## Evaluation Runs
 Evaluations with three prompts with different trigger-word positions. 
 
 - [eval_0_0_P1](https://huggingface.co/spaces/lerobot/visualize_dataset?path=%2FRickRain%2Feval_0_0_P1%2Fepisode_0)
